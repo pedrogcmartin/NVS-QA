@@ -4,9 +4,9 @@
 
 This database contains 88 videos synthesized with seven NeRF based methods, together with their perceived quality scores, resulting from subjective assessment tests.
 
-NeRF-QA: Neural Radiance Fields Quality Assessment Database
-Pedro Martin, António Rodrigues, João Ascenso, Maria Paula Queluz
-Instituto de Telecomunicações, Instituto Superior Técnico, University of Lisbon
+NeRF-QA: Neural Radiance Fields Quality Assessment Database\*
+Pedro Martin, António Rodrigues, João Ascenso, Maria Paula Queluz\*
+Instituto de Telecomunicações, Instituto Superior Técnico, University of Lisbon\*
 in 15th International Conference on Quality of Multimedia Experience (QoMEX)
 
 ![DSCQS](https://github.com/pedrogcmartin/NeRF-QA-Database/blob/main/github%20images/DSCQS.jpg)
