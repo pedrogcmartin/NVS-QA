@@ -1,7 +1,5 @@
 # NeRF-QA-II Database
 
-### [Paper Page](https://ieeexplore.ieee.org/document/10178625)
-
 This database contains 88 videos synthesized with seven NeRF based methods, together with their perceived quality scores, resulting from subjective assessment tests.
 
 Neural View Synthesis: Subjective Quality Assessment and Objective Metrics Evaluation
@@ -75,10 +73,6 @@ The NeRF methods selected for the FF synthetic scenes were:
 The selected 360º datasets (namely: *Tanks and Temples* and *Realistic Synthetic 360*) have already been used in published works, enabling the validation of the herein generated synthesized videos, by comparison of the obtained objective quality metrics values (using PSNR, SSIM, and LPIPS) with the values reported on those works. Lastly, the 360º synthetic scenes were also synthesized for the case where a subsampling with a factor of 2 was applied to the training set, seeking synthesized video qualities covering the lowest qualities range.
 
 The Double Stimulus Continous Quality Scale (DSCQS) was selected as an evaluation method. A total of 88 pairs of stimulus (56 synthesized synthetic videos + 32 synthesized real videos, together with the respective original videos) were assessed. After the test, the resulting scores were processed according to [11] to obtain Differential Mean Opinion Score (DMOS) values for each synthesized video. More details about the subjective assessment procedure can be found in [11].
-
-# Citation
-
-P. Martin, A. Rodrigues, J. Ascenso and M. P. Queluz, "NeRF-QA: Neural Radiance Fields Quality Assessment Database," 2023 15th International Conference on Quality of Multimedia Experience (QoMEX), Ghent, Belgium, 2023, pp. 107-110, doi: 10.1109/QoMEX58391.2023.10178625.
 
 # References
 
