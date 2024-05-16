@@ -1,22 +1,19 @@
-# NeRF-QA-II Database
+# NVS-QA Database
 
-This database contains 88 videos synthesized with seven NeRF based methods, together with their perceived quality scores, resulting from subjective assessment tests.
+NeRF View Synthesis: Subjective Quality Assessment and Objective Metrics Evaluation
 
-Neural View Synthesis: Subjective Quality Assessment and Objective Metrics Evaluation
 Pedro Martin, António Rodrigues, João Ascenso, Maria Paula Queluz  
 Instituto de Telecomunicações, Instituto Superior Técnico, University of Lisbon
 
-![DSCQS](https://github.com/pedrogcmartin/NeRF-QA-Database/blob/main/github%20images/DSCQS.jpg)
+The NVS-QA database contains: 
 
-**Note:** This is an updated version of the NeRF-QA database with new material (namely, the "Front-facing IST" visual scenes dataset and a new subjective test conducted on 22 participants).
-
-The NeRF-QA-II database contains: 
-
-+ Information about visual scenes that is used for NeRF based methods training (in the "Raw Visual Scenes" folder) with eight, real and synthetic, 360º camera acquition visual scenes (in the "Tanks and Temples" and "Realistic Synthetic 360" folders, respectively) and eight, real and synthetic, front-facing (FF) camera acquisition visual scenes (in the "Front-facing IST" folder) that are used to train seven NeRF based methods (nameley: DVGO, Instant-NGP, Mip-NeRF 360, Nerfacto, NeRF++, Plenoxels, and TensoRF [1,2,3,4,5,6,7]);
++ Information about visual scenes that is used for NeRF based methods training (in the "Training Dataset" folder) with eight, real and synthetic, 360º camera acquition visual scenes (in the "Tanks and Temples" and "Realistic Synthetic 360" folders, respectively) and eight, real and synthetic, front-facing (FF) camera acquisition visual scenes (in the "Front-facing IST" folder) that are used to train seven NeRF based methods (nameley: DVGO, Instant-NGP, Mip-NeRF 360, Nerfacto, NeRF++, Plenoxels, and TensoRF [1,2,3,4,5,6,7]);
 + Reference videos of the visual scenes (in the "Reference Videos" folder), with durations of 10s (and of 8s for 360º synthetics scenes);
 + Camera paths with the pose estimation of the reference videos enabling the creation of synthesized videos with the same camera path (in the "Camera Paths" folder);
 + Synthesized videos of the same test time interval of the reference videos due to the camera paths available information (in the "Synthesized Videos" folder);
 + Results of a subjective study comparing the qualities of the reference and synthesized videos by a group of 22 participants (in the "DMOS.xlsx" file).
+
+![DSCQS](https://github.com/pedrogcmartin/NeRF-QA-Database/blob/main/github%20images/DSCQS.jpg)
 
 The real scenes selected from *Front-Facing IST* were:
 + *Antique* (351 training images with 960x540 pixels each)
