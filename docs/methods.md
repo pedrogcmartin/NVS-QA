@@ -2,9 +2,13 @@
 
 From several NVS methods that have been proposed in the past, a subset was selected according to the synthesis performance, training and synthesis speed, and suitability to the considered scene classes, nameley: DVGO, Instant-NGP, Mip-NeRF 360, Nerfacto, NeRF++, Plenoxels, and TensoRF [1,2,3,4,5,6,7].
 
-| Left-Aligned | Center-Aligned | Right-Aligned |
-|:-------------|:--------------:|--------------:|
-| Text         | Text           | Text          |
+| Scene Class | Criteria                      | Description                           |
+|-------------|-------------------------------|---------------------------------------|
+| Urban       | High density of buildings     | Includes cities and large towns       |
+| Rural       | Low density of buildings      | Includes countryside and villages     |
+| Forest      | High density of trees         | <table><tr><td>High vegetation</td></tr><tr><td>Natural forests</td></tr></table> |
+| Coastal     | Proximity to bodies of water  | Includes beaches and shorelines       |
+
 
 Table I presents a summarized description of each selected NeRF method and the scene classes to which they were applied in this paper. Scene classes for which the resulting view synthesis quality was far below acceptable, were excluded from the study; this was the case for Instant-NGP, Plenoxels, and TensoRF with real scenes. Plenoxels was only applied to 360º synthetic due to its design and performance similarities with the DVGO method. Moreover, it is worthy to note that NeRF++, Mip-NeRF 360, and Nerfacto were specifically designed for unbounded scenes; the first two (NeRF++ and Mip-NeRF 360) for 360º unbounded scenes. The remaining methods (Instant-NGP, DVGO, Plenoxels, and TensoRF) were not targeted to a specific scene class, but are more suitable for the synthetic scenes synthesis; furthermore, due to the use of 3D voxel grids in these methods, the training/synthesis times are significantly reduced compared to NeRF++ and Mip-NeRF 360.
 
