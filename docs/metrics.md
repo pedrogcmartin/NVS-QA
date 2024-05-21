@@ -1,8 +1,6 @@
 # Objective Quality Metrics Information
 
-
-From several NVS methods that have been proposed in the past, a subset was selected according to the synthesis performance, training and synthesis speed, and suitability to the considered scene classes, nameley: DVGO, Instant-NGP, Mip-NeRF 360, Nerfacto, NeRF++, Plenoxels, and TensoRF [1,2,3,4,5,6,7].
-
+The objective quality metrics selection was based on several criteria, notably: i) metrics that are typically applied in the NVS literature, namely PSNR-Y, PSNR-YUV, SSIM [5], MS-SSIM [6], LPIPS [7], and FovVideoVDP [8], since it is important to know whether they are in fact suitable for assessing the quality of NVS content; ii) metrics that have shown good performance in several image and video applications, such as PSNR-HVS [40], IW-SSIM [41], VIF and VIFp [42], FSIM [43], VSI [44], MAD [45], GMSD [46], and NLPD [47]; iii) learning-based metrics (besides LPIPS), namely ST-LPIPS [48], DISTS [49], and VMAF [50]; iv) MSE, since every selected NVS method includes it in the loss function. All metrics are full-reference.
 
 | Metric        | Color Space | Description                                                                                                   |
 |:-------------:|:-----------:|:--------------------------------------------------------------------------------------------------------------|
@@ -26,29 +24,24 @@ From several NVS methods that have been proposed in the past, a subset was selec
 | [VMAF](github.com/Netflix/vmaf) [50]     | YUV         | Merges existing metrics and image feature components using a support vector machine                             |
 | [FovVideoVDP](github.com/gfxdisp/FovVideoVDP) [8] | RGB       | Considers spatial, temporal, and peripherical aspects related with the foveate vision effect                    |
 
-
-The table above presents a summarized description of each selected NeRF method. The scene classes to which they were applied are described bellow.
+Most of the selected metrics were designed for the quality assessment of still images (IQA metrics), with FovVideoVDP and VMAF being the exceptions as they were specifically tailored for video (VQA metrics). In this paper, the latter were directly applied to the reference and synthesized videos, whereas the former were applied to individual frames of both videos, followed by the averaging of the frame-based quality scores to obtain a global video score. In terms of the metrics implementation, while for DISTS, FovVideoVDP, IW-SSIM, LPIPS, PSNR-HVS, and VMAF the code was provided by the authors in their respective publications were used for the remaining metrics. The table above presents a comprehensive overview of the selected metrics, including their succinct descriptions, reference to the source code, and the used color space. As suggested in [51], [52], a disparity compensation should be performed between synthesized and reference images before applying conventional quality metrics (such as SSIM). In fact, even though the MRE is around 0.86 and 1.04 pixels for 360º real and FF real scenes, respectively, the NeRF pipeline may lead to an amplification effect of the pose errors negative impact on the synthesized view. Thus, the object shifts from the ground-truth to the synthesized image can be significantly higher than the corresponding MRE. Disparity compensation is performed with block-matching algorithm with a macroblock size of 32×32 pixels and search parameter of 12 pixels (except for the NeRF++ synthesized sequences of the antique and flowers scenes, where a value of 50 pixels was selected as disparities of more than 12 pixels were present).
 
 # References
 
-[1] C. Sun, M. Sun, and H.-T. Chen, “Direct Voxel Grid Optimization: Super-Fast Convergence for Radiance Fields Reconstruction,” in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022, pp. 5459–5469.
-
-[2] T. Müller, A. Evans, C. Schied, and A. Keller, “Instant neural graphics primitives with a multiresolution hash encoding,” in ACM Trans. Graph., vol. 41, no. 4, p. 102:1-102:15, Jul. 2022, doi: 10.1145/3528223.3530127.
-
-[3] J. T. Barron, B. Mildenhall, D. Verbin, P. P. Srinivasan, and P. Hedman, “Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields,” in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022, pp. 5470–5479.
-
-[4] M. Tancik et al., “Nerfstudio: A Modular Framework for Neural Radiance Field Development.” arXiv, Feb. 08, 2023. doi: 10.48550/arXiv.2302.04264.
-
-[5] K. Zhang, G. Riegler, N. Snavely, and V. Koltun, “NeRF++: Analyzing and Improving Neural Radiance Fields.” arXiv, Oct. 21, 2020. doi: 10.48550/arXiv.2010.07492.
-
-[6] S. Fridovich-Keil, A. Yu, M. Tancik, Q. Chen, B. Recht, and A. Kanazawa, “Plenoxels: Radiance Fields Without Neural Networks,” in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022, pp. 5501–5510.
-
-[7] A. Chen, Z. Xu, A. Geiger, J. Yu, and H. Su, “TensoRF: Tensorial Radiance Fields,” in Computer Vision – ECCV 2022, S. Avidan, G. Brostow, M. Cissé, G. M. Farinella, and T. Hassner, Eds., in Lecture Notes in Computer Science. Cham: Springer Nature Switzerland, 2022, pp. 333–350. doi: 10.1007/978-3-031-19824-3_20.
-
-[8] A. Knapitsch, J. Park, Q.-Y. Zhou, and V. Koltun, “Tanks and temples: benchmarking large-scale scene reconstruction,” in ACM Trans. Graph., vol. 36, no. 4, p. 78:1-78:13, Jul. 2017, doi: 10.1145/3072959.3073599.
-
-[9] B. Mildenhall, P. P. Srinivasan, M. Tancik, J. T. Barron, R. Ramamoorthi, and R. Ng, “NeRF: representing scenes as neural radiance fields for view synthesis,” in Commun. ACM, vol. 65, no. 1, pp. 99–106, Dec. 2021, doi: 10.1145/3503250.
-
-[10] B. Foundation, “Blender - a 3D modelling and rendering package.” Stichting Blender Foundation, Amsterdam, 2018.
-
-[11] ITU-R, “BT.500-14: Methodologies for the subjective assessment of the quality of television images,” 2019.
+[5]	Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli, “Image quality assessment: from error visibility to structural similarity,” IEEE Trans. Image Process., vol. 13, no. 4, pp. 600–612, Apr. 2004.
+[6]	Z. Wang, E. Simoncelli, and A. Bovik, “Multiscale structural similarity for image quality assessment,” in Asilomar Conference on Signals, Systems and Computers (ACSSC), Pacific Grove, CA, USA, Dec. 2003, pp. 1398-1402 Vol.2.
+[7]	R. Zhang, P. Isola, A. A. Efros, E. Shechtman, and O. Wang, “The Unreasonable Effectiveness of Deep Features as a Perceptual Metric,” in Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR), Salt Lake City, UT, USA, Jun. 2018, pp. 586–595.
+[8]	R. K. Mantiuk et al., “FovVideoVDP: a visible difference predictor for wide field-of-view video,” ACM Trans. Graph., vol. 40, no. 4, p. 49:1-49:19, Jul. 2021.
+[40]	P. Gupta, P. Srivastava, S. Bhardwaj, and V. Bhateja, “A modified PSNR metric based on HVS for quality assessment of color images,” in IEEE Int. Conf. Communication and Industrial Application (ICCIA), Kolkata, India, Dec. 2011, pp. 1–4.
+[41]	Z. Wang and Q. Li, “Information Content Weighting for Perceptual Image Quality Assessment,” IEEE Trans. Image Process., vol. 20, no. 5, pp. 1185–1198, May 2011.
+[42]	H. R. Sheikh and A. C. Bovik, “Image information and visual quality,” IEEE Trans. Image Process., vol. 15, no. 2, pp. 430–444, Feb. 2006.
+[43]	L. Zhang, L. Zhang, X. Mou, and D. Zhang, “FSIM: A Feature Similarity Index for Image Quality Assessment,” IEEE Trans. Image Process., vol. 20, no. 8, pp. 2378–2386, Aug. 2011.
+[44]	L. Zhang, Y. Shen, and H. Li, “VSI: A Visual Saliency-Induced Index for Perceptual Image Quality Assessment,” IEEE Trans. Image Process., vol. 23, no. 10, pp. 4270–4281, Oct. 2014.
+[45]	E. Larson and D. Chandler, “Most apparent distortion: Full-reference image quality assessment and the role of strategy,” J. Electron. Imaging, vol. 19, p. 011006, Jan. 2010.
+[46]	B. Zhang, P. V. Sander, and A. Bermak, “Gradient magnitude similarity deviation on multiple scales for color image quality assessment,” in Proc. IEEE Int. Conf. Acoust., Speech Signal Process. (ICASSP), New Orleans, LA, USA, Mar. 2017, pp. 1253–1257.
+[47]	V. Laparra, A. Berardino, J. Ballé, and E. P. Simoncelli, “Perceptually optimized image rendering,” J. Opt. Soc. Am. A, vol. 34, no. 9, pp. 1511–1525, Sep. 2017.
+[48]	A. Ghildyal and F. Liu, “Shift-Tolerant Perceptual Similarity Metric,” in European Conference on Computer Vision (ECCV), Berlin, Heidelberg: Springer-Verlag, Oct. 2022, pp. 91–107.
+[49]	K. Ding, K. Ma, S. Wang, and E. P. Simoncelli, “Image Quality Assessment: Unifying Structure and Texture Similarity,” IEEE Trans. Pattern Anal. Mach. Intell., vol. 44, no. 5, pp. 2567–2581, May 2022.
+[50]	Z. Li, A. Aaron, I. Katsavounidis, A. Moorthy, and M. Manohara, “Toward A Practical Perceptual Video Quality Metric,” Medium, Apr. 2017.
+[51]	E. Bosc et al., “Towards a New Quality Metric for 3-D Synthesized View Assessment,” IEEE J. Sel. Top. Signal Process., vol. 5, no. 7, pp. 1332–1343, Nov. 2011.
+[52]	C.-T. Tsai and H.-M. Hang, “Quality assessment of 3D synthesized views with depth map distortion,” in 2013 Visual Communications and Image Processing (VCIP), Nov. 2013, pp. 1–6.
