@@ -24,6 +24,6 @@ The scenes selected from *Realistic Synthetic 360º* dataset were:
 + *Lego* (100 training images with 800×800 pixels each)
 + *Ship* (100 training images with 800×800 pixels each) 
 
-For the subjective test purpose, the spatial resolutions of the real and FF scenes were uniformized with a downsampling to 960×540 pixels, followed by a cropping to 928×522 pixels.
+For the subjective test purpose, the spatial resolutions of the real and FF scenes were uniformized with a cropping to 928×522 pixels.
 
 The selected 360º datasets (namely: [Tanks and Temples](https://www.tanksandtemples.org) and [Realistic Synthetic 360](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1)) have already been used in published works, enabling the validation of the herein generated synthesized videos, by comparison of the obtained objective quality metrics values (using PSNR, SSIM, and LPIPS) with the values reported on those works. Lastly, the 360º synthetic scenes were also synthesized for the case where a subsampling with a factor of 2 was applied to the training set, seeking synthesized video qualities covering the lowest qualities range.
