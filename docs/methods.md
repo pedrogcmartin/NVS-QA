@@ -2,42 +2,44 @@
 
 From several NVS methods that have been proposed in the past, a subset was selected according to the synthesis performance, training and synthesis speed, and suitability to the considered scene classes, nameley: DVGO, Instant-NGP, Mip-NeRF 360, Nerfacto, NeRF++, Plenoxels, and TensoRF [1,2,3,4,5,6,7].
 
-| NVS Method   | Description |
-|:------------:|:------------|
-| DVGO         | Text        |
-| Instant-NGP  | Text        |
-| Mip-NeRF 360 | Text        |
-| NeRF++       | Text        |
-| Nerfacto     | Text        |
-| TensoRF      | Text        |
+| NVS Method                                                           | Description |
+|:--------------------------------------------------------------------:|:------------|
+| [DVGO]](https://sunset1995.github.io/dvgo/)                          | Text        |
+| [Instant-NGP](https://nvlabs.github.io/instant-ngp/)                 | Text        |
+| [Mip-NeRF 360](https://jonbarron.info/mipnerf360/)                   | Text        |
+| [NeRF++](https://github.com/Kai-46/nerfplusplus)                     | Text        |
+| [Nerfacto](https://docs.nerf.studio/nerfology/methods/nerfacto.html) | Text        |
+| [TensoRF](https://apchenstu.github.io/TensoRF/)                      | Text        |
 
-Table I presents a summarized description of each selected NeRF method and the scene classes to which they were applied in this paper. Scene classes for which the resulting view synthesis quality was far below acceptable, were excluded from the study; this was the case for Instant-NGP, Plenoxels, and TensoRF with real scenes. Plenoxels was only applied to 360º synthetic due to its design and performance similarities with the DVGO method. Moreover, it is worthy to note that NeRF++, Mip-NeRF 360, and Nerfacto were specifically designed for unbounded scenes; the first two (NeRF++ and Mip-NeRF 360) for 360º unbounded scenes. The remaining methods (Instant-NGP, DVGO, Plenoxels, and TensoRF) were not targeted to a specific scene class, but are more suitable for the synthetic scenes synthesis; furthermore, due to the use of 3D voxel grids in these methods, the training/synthesis times are significantly reduced compared to NeRF++ and Mip-NeRF 360.
+The table above presents a summarized description of each selected NeRF method. The scene classes to which they were applied are described bellow. 
 
-The NeRF methods selected for the 360º real scenes were:
+The NVS methods selected for the 360º real scenes were:
 + DVGO [1]
 + Mip-NeRF 360 [3]
 + Nerfacto [4]
 + NeRF++ [5] 
 
-The NeRF methods selected for the 360º synthetic scenes were:
+The NVS methods selected for the 360º synthetic scenes were:
 + DVGO [1]
 + Instant-NGP [2]
 + Plenoxels [6]
 + TensoRF [7]
 
-The NeRF methods selected for the FF real scenes were:
+The NVS methods selected for the FF real scenes were:
 + DVGO [1]
 + Mip-NeRF 360 [3]
 + Nerfacto [4]
 + NeRF++ [5] 
 
-The NeRF methods selected for the FF synthetic scenes were:
+The NVS methods selected for the FF synthetic scenes were:
 + DVGO [1]
 + Instant-NGP [2]
 + Mip-NeRF 360 [3]
 + Nerfacto [4]
 + NeRF++ [5] 
 + TensoRF [7]
+
+Scene classes for which the resulting view synthesis quality was far below acceptable, were excluded from the study; this was the case for Instant-NGP, Plenoxels, and TensoRF with real scenes. Plenoxels was only applied to 360º synthetic due to its design and performance similarities with the DVGO method. Moreover, it is worthy to note that NeRF++, Mip-NeRF 360, and Nerfacto were specifically designed for unbounded scenes; the first two (NeRF++ and Mip-NeRF 360) for 360º unbounded scenes. The remaining methods (Instant-NGP, DVGO, Plenoxels, and TensoRF) were not targeted to a specific scene class, but are more suitable for the synthetic scenes synthesis; furthermore, due to the use of 3D voxel grids in these methods, the training/synthesis times are significantly reduced compared to NeRF++ and Mip-NeRF 360.
 
 # References
 
