@@ -16,7 +16,7 @@ The NVS-QA database contains:
 
 ![DSCQS](https://github.com/pedrogcmartin/NeRF-QA-Database/blob/main/github%20images/DSCQS.jpg)
 
-+ Selected Visual Scenes ([Scenes](https://github.com/pedrogcmartin/NVS-QA-Database/pages/scenes.md))
++ Selected Visual Scenes ([Scenes](https://github.com/pedrogcmartin/NVS-QA-Database/blob/main/pages/scenes.md))
 
 
 The NeRF methods selected for the 360º real scenes were:
