@@ -6,24 +6,19 @@ From several NVS methods that have been proposed in the past, a subset was selec
 
 | Metric        | Color Space | Description                                                                                                   |
 |:-------------:|:-----------:|:--------------------------------------------------------------------------------------------------------------|
-| [MSE](scikit-image.org/docs/stable/api/skimage.metrics)
-)           | RGB         | Average squared difference between corresponding pixels of the two images                                      |
+| [MSE](scikit-image.org/docs/stable/api/skimage.metrics)           | RGB         | Average squared difference between corresponding pixels of the two images                                      |
 | [PSNR-Y](scikit-image.org/docs/stable/api/skimage.metrics)        | Y           | Ratio between the maximum power of the image luminance component, and the power of its distortion, measured by the MSE |
 | PSNR-YUV      | YUV         | PSNR applied on the YUV color space                                                                            |
-| [PSNR-HVS](pypi.org/project/psnr-hvsm)
-) [40] | Y           | PSNR with the MSE computed in the DCT domain, using frequency dependent weights                                |
-| [SSIM](pypi.org/project/sewar)
-) [5]      | Y           | Quantifies the similarity between the two images in terms of luminance, contrast, and structure                |
+| [PSNR-HVS](pypi.org/project/psnr-hvsm) [40] | Y           | PSNR with the MSE computed in the DCT domain, using frequency dependent weights                                |
+| [SSIM](pypi.org/project/sewar) [5]      | Y           | Quantifies the similarity between the two images in terms of luminance, contrast, and structure                |
 | [MS-SSIM](pypi.org/project/sewar) [6]   | Y           | Multi-scale variation of SSIM                                                                                  |
-| IW-SSIM [41]  | Y           | A variation of SSIM using information content weighted pooling                                                 |
+| [IW-SSIM](github.com/Jack-guo-xy/Python-IW-SSIM) [41]  | Y           | A variation of SSIM using information content weighted pooling                                                 |
 | [VIF](pypi.org/project/sewar) [42]      | Y           | Considers natural scene statistics in the wavelet domain for content fidelity comparison between the two images |
 | [VIFp](pypi.org/project/sewar) [42]     | Y           | Pixel domain version of VIF                                                                                    |
-| [FSIM](pypi.org/project/IQA-pytorch)
-) [43]     | LAB         | Normalized average value of features similarity between the two images                                         |
+| [FSIM](pypi.org/project/IQA-pytorch) [43]     | LAB         | Normalized average value of features similarity between the two images                                         |
 | [VSI](pypi.org/project/IQA-pytorch) [44]      | RGB         | Uses visual saliency information both as a quality feature and as a weighting function at the pooling stage     |
 | [MAD](pypi.org/project/IQA-pytorch) [45]      | Y           | Models adaptive strategies of the human visual system, combining a distortion detection strategy and an appearance-based strategy |
-| [LPIPS](github.com/richzhang/PerceptualSimilarity)
-) [7]     | RGB         | Measures the perceptual similarity between the two images, based on neural network learned features             |
+| [LPIPS](github.com/richzhang/PerceptualSimilarity) [7]     | RGB         | Measures the perceptual similarity between the two images, based on neural network learned features             |
 | [ST-LPIPS](pypi.org/project/IQA-pytorch) [48] | RGB         | A variation of LPIPS tolerant to small pixel disparities among between the two images                          |
 | [DISTS](github.com/dingkeyan93/DISTS)
 ) [49]    | RGB         | Structure and texture similarity measurements (SSIM-like) between corresponding feature maps of the two images  |
