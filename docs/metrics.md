@@ -6,25 +6,31 @@ From several NVS methods that have been proposed in the past, a subset was selec
 
 | Metric        | Color Space | Description                                                                                                   |
 |:-------------:|:-----------:|:--------------------------------------------------------------------------------------------------------------|
-| MSE           | RGB         | Average squared difference between corresponding pixels of the two images                                      |
-| PSNR-Y        | Y           | Ratio between the maximum power of the image luminance component, and the power of its distortion, measured by the MSE |
+| [MSE](scikit-image.org/docs/stable/api/skimage.metrics)
+)           | RGB         | Average squared difference between corresponding pixels of the two images                                      |
+| [PSNR-Y](scikit-image.org/docs/stable/api/skimage.metrics)        | Y           | Ratio between the maximum power of the image luminance component, and the power of its distortion, measured by the MSE |
 | PSNR-YUV      | YUV         | PSNR applied on the YUV color space                                                                            |
-| PSNR-HVS [40] | Y           | PSNR with the MSE computed in the DCT domain, using frequency dependent weights                                |
-| SSIM [5]      | Y           | Quantifies the similarity between the two images in terms of luminance, contrast, and structure                |
-| MS-SSIM [6]   | Y           | Multi-scale variation of SSIM                                                                                  |
+| [PSNR-HVS](pypi.org/project/psnr-hvsm)
+) [40] | Y           | PSNR with the MSE computed in the DCT domain, using frequency dependent weights                                |
+| [SSIM](pypi.org/project/sewar)
+) [5]      | Y           | Quantifies the similarity between the two images in terms of luminance, contrast, and structure                |
+| [MS-SSIM](pypi.org/project/sewar) [6]   | Y           | Multi-scale variation of SSIM                                                                                  |
 | IW-SSIM [41]  | Y           | A variation of SSIM using information content weighted pooling                                                 |
-| VIF [42]      | Y           | Considers natural scene statistics in the wavelet domain for content fidelity comparison between the two images |
-| VIFp [42]     | Y           | Pixel domain version of VIF                                                                                    |
-| FSIM [43]     | LAB         | Normalized average value of features similarity between the two images                                         |
-| VSI [44]      | RGB         | Uses visual saliency information both as a quality feature and as a weighting function at the pooling stage     |
-| MAD [45]      | Y           | Models adaptive strategies of the human visual system, combining a distortion detection strategy and an appearance-based strategy |
-| LPIPS [7]     | RGB         | Measures the perceptual similarity between the two images, based on neural network learned features             |
-| ST-LPIPS [48] | RGB         | A variation of LPIPS tolerant to small pixel disparities among between the two images                          |
-| DISTS [49]    | RGB         | Structure and texture similarity measurements (SSIM-like) between corresponding feature maps of the two images  |
-| GMSD [46]     | Y           | Computes the pixel-wise gradient magnitude similarity (GMS) between two images, followed by pooling based on the standard deviation of the GMS map |
-| NLPD [47]     | Y           | Mimics the nonlinear transformations of the early visual system, as local luminance subtraction and local gain control, and combines these values using weighted lp-norms |
-| VMAF [50]     | YUV         | Merges existing metrics and image feature components using a support vector machine                             |
-| FovVideoVDP [8] | RGB       | Considers spatial, temporal, and peripherical aspects related with the foveate vision effect                    |
+| [VIF](pypi.org/project/sewar) [42]      | Y           | Considers natural scene statistics in the wavelet domain for content fidelity comparison between the two images |
+| [VIFp](pypi.org/project/sewar) [42]     | Y           | Pixel domain version of VIF                                                                                    |
+| [FSIM](pypi.org/project/IQA-pytorch)
+) [43]     | LAB         | Normalized average value of features similarity between the two images                                         |
+| [VSI](pypi.org/project/IQA-pytorch) [44]      | RGB         | Uses visual saliency information both as a quality feature and as a weighting function at the pooling stage     |
+| [MAD](pypi.org/project/IQA-pytorch) [45]      | Y           | Models adaptive strategies of the human visual system, combining a distortion detection strategy and an appearance-based strategy |
+| [LPIPS](github.com/richzhang/PerceptualSimilarity)
+) [7]     | RGB         | Measures the perceptual similarity between the two images, based on neural network learned features             |
+| [ST-LPIPS](pypi.org/project/IQA-pytorch) [48] | RGB         | A variation of LPIPS tolerant to small pixel disparities among between the two images                          |
+| [DISTS](github.com/dingkeyan93/DISTS)
+) [49]    | RGB         | Structure and texture similarity measurements (SSIM-like) between corresponding feature maps of the two images  |
+| [GMSD](pypi.org/project/IQA-pytorch) [46]     | Y           | Computes the pixel-wise gradient magnitude similarity (GMS) between two images, followed by pooling based on the standard deviation of the GMS map |
+| [NLPD](pypi.org/project/IQA-pytorch) [47]     | Y           | Mimics the nonlinear transformations of the early visual system, as local luminance subtraction and local gain control, and combines these values using weighted lp-norms |
+| [VMAF](github.com/Netflix/vmaf) [50]     | YUV         | Merges existing metrics and image feature components using a support vector machine                             |
+| [FovVideoVDP](github.com/gfxdisp/FovVideoVDP) [8] | RGB       | Considers spatial, temporal, and peripherical aspects related with the foveate vision effect                    |
 
 
 The table above presents a summarized description of each selected NeRF method. The scene classes to which they were applied are described bellow.
