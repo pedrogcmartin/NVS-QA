@@ -16,7 +16,7 @@ The NVS-QA database contains:
 
 ![DSCQS](https://github.com/pedrogcmartin/NeRF-QA-Database/blob/main/github%20images/DSCQS.jpg)
 
-For more information about:
+Click for more information about:
 
 + [Selected Visual Scenes](https://github.com/pedrogcmartin/NVS-QA-Database/blob/main/docs/scenes.md)
 + [Selected NVS Methods](https://github.com/pedrogcmartin/NVS-QA-Database/blob/main/docs/methods.md)
