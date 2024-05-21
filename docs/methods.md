@@ -4,12 +4,13 @@ From several NVS methods that have been proposed in the past, a subset was selec
 
 | NVS Method                                                           | Description |
 |:--------------------------------------------------------------------:|:------------|
-| [DVGO](https://sunset1995.github.io/dvgo/)                          | Text        |
-| [Instant-NGP](https://nvlabs.github.io/instant-ngp/)                 | Text        |
-| [Mip-NeRF 360](https://jonbarron.info/mipnerf360/)                   | Text        |
-| [NeRF++](https://github.com/Kai-46/nerfplusplus)                     | Text        |
-| [Nerfacto](https://docs.nerf.studio/nerfology/methods/nerfacto.html) | Text        |
-| [TensoRF](https://apchenstu.github.io/TensoRF/)                      | Text        |
+| [DVGO](https://sunset1995.github.io/dvgo/)                           | Super-fast convergence approach that adopts a scene representation consisting of a density voxel grid for scene geometry, and a feature voxel grid with a shallow network for complex view-dependent appearance. |
+| [Instant-NGP](https://nvlabs.github.io/instant-ngp/)                 | Achieves fast training by implementing neural graphics primitives with a small neural network, and a multiresolution hash table. |
+| [Mip-NeRF 360](https://jonbarron.info/mipnerf360/)                   | Addresses the synthesis challenges  for unbounded 360º scenes ; uses a non-linear scene parameterization, online distillation, and a distortion-based regularizer, to overcome  blurry renderings. |
+| [NeRF++](https://github.com/Kai-46/nerfplusplus)                     | Aims to enhance view synthesis fidelity for unbounded 360-degree scenes by incorporating a novel hierarchical sampling scheme and a shape-prior regularizer. |
+| [Nerfacto](https://docs.nerf.studio/nerfology/methods/nerfacto.html) | Combines components from existing NeRF methods, seeking a balance between speed and quality. |
+| [Plenoxels](https://alexyu.net/plenoxels/)                           | Uses a sparse voxel grid with spherical harmonics, optimized with a reconstruction loss and a total variation regularizer; comparatively to the seminal NeRF, achieves a faster training with a similar view synthesis quality level. |
+| [TensoRF](https://apchenstu.github.io/TensoRF/)                      | Models and reconstructs the scene radiance field using a 4D tensor representation of a voxel grid, with per-voxel multi-channel features; factorizes the 4D tensor into multiple, low-rank tensor components. |
 
 The table above presents a summarized description of each selected NeRF method. The scene classes to which they were applied are described bellow. 
 
