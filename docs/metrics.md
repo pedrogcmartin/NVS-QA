@@ -8,7 +8,7 @@ From several NVS methods that have been proposed in the past, a subset was selec
 |:-------------:|:-----------:|:--------------------------------------------------------------------------------------------------------------|
 | [MSE](scikit-image.org/docs/stable/api/skimage.metrics)           | RGB         | Average squared difference between corresponding pixels of the two images                                      |
 | [PSNR-Y](scikit-image.org/docs/stable/api/skimage.metrics)        | Y           | Ratio between the maximum power of the image luminance component, and the power of its distortion, measured by the MSE |
-| PSNR-YUV      | YUV         | PSNR applied on the YUV color space                                                                            |
+| [PSNR-YUV](scikit-image.org/docs/stable/api/skimage.metrics)      | YUV         | PSNR applied on the YUV color space                                                                            |
 | [PSNR-HVS](pypi.org/project/psnr-hvsm) [40] | Y           | PSNR with the MSE computed in the DCT domain, using frequency dependent weights                                |
 | [SSIM](pypi.org/project/sewar) [5]      | Y           | Quantifies the similarity between the two images in terms of luminance, contrast, and structure                |
 | [MS-SSIM](pypi.org/project/sewar) [6]   | Y           | Multi-scale variation of SSIM                                                                                  |
@@ -20,8 +20,7 @@ From several NVS methods that have been proposed in the past, a subset was selec
 | [MAD](pypi.org/project/IQA-pytorch) [45]      | Y           | Models adaptive strategies of the human visual system, combining a distortion detection strategy and an appearance-based strategy |
 | [LPIPS](github.com/richzhang/PerceptualSimilarity) [7]     | RGB         | Measures the perceptual similarity between the two images, based on neural network learned features             |
 | [ST-LPIPS](pypi.org/project/IQA-pytorch) [48] | RGB         | A variation of LPIPS tolerant to small pixel disparities among between the two images                          |
-| [DISTS](github.com/dingkeyan93/DISTS)
-) [49]    | RGB         | Structure and texture similarity measurements (SSIM-like) between corresponding feature maps of the two images  |
+| [DISTS](github.com/dingkeyan93/DISTS) [49]    | RGB         | Structure and texture similarity measurements (SSIM-like) between corresponding feature maps of the two images  |
 | [GMSD](pypi.org/project/IQA-pytorch) [46]     | Y           | Computes the pixel-wise gradient magnitude similarity (GMS) between two images, followed by pooling based on the standard deviation of the GMS map |
 | [NLPD](pypi.org/project/IQA-pytorch) [47]     | Y           | Mimics the nonlinear transformations of the early visual system, as local luminance subtraction and local gain control, and combines these values using weighted lp-norms |
 | [VMAF](github.com/Netflix/vmaf) [50]     | YUV         | Merges existing metrics and image feature components using a support vector machine                             |
