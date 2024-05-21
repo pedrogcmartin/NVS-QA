@@ -11,39 +11,13 @@ The NVS-QA database contains:
 + Reference videos of the visual scenes (in the "Reference Videos" folder), with durations of 10s (and of 8s for 360º synthetics scenes);
 + Results of a subjective study comparing the qualities of the reference and synthesized videos by a group of 22 participants (in the "DMOS.xlsx" file);
 + Quality prediction results of a selection of 19 objective quality metrics on the reference and synthesized material (in the "metrics.xlsx" file);
-+ Training dataset used for the NeRF based methods training (in the "Front-facing Dataset" folder) with eight, real and synthetic, front-facing (FF) camera acquisition visual scenes;
++ Training dataset used for the NVS methods training (in the "Front-facing Dataset" folder) with eight, real and synthetic, front-facing (FF) camera acquisition visual scenes;
 + Camera paths with the pose estimation of the reference videos enabling the creation of synthesized videos with the same camera path (in the "Camera Paths" folder).
 
 ![DSCQS](https://github.com/pedrogcmartin/NeRF-QA-Database/blob/main/github%20images/DSCQS.jpg)
 
 + Selected Visual Scenes ([Scenes](https://github.com/pedrogcmartin/NVS-QA-Database/blob/main/docs/scenes.md))
-+ Selected NeRF Methods ([Methods](https://github.com/pedrogcmartin/NVS-QA-Database/blob/main/docs/methods.md))
-
-The NeRF methods selected for the 360º real scenes were:
-+ DVGO [1]
-+ Mip-NeRF 360 [3]
-+ Nerfacto [4]
-+ NeRF++ [5] 
-
-The NeRF methods selected for the 360º synthetic scenes were:
-+ DVGO [1]
-+ Instant-NGP [2]
-+ Plenoxels [6]
-+ TensoRF [7]
-
-The NeRF methods selected for the FF real scenes were:
-+ DVGO [1]
-+ Mip-NeRF 360 [3]
-+ Nerfacto [4]
-+ NeRF++ [5] 
-
-The NeRF methods selected for the FF synthetic scenes were:
-+ DVGO [1]
-+ Instant-NGP [2]
-+ Mip-NeRF 360 [3]
-+ Nerfacto [4]
-+ NeRF++ [5] 
-+ TensoRF [7]
++ Selected NVS Methods ([Methods](https://github.com/pedrogcmartin/NVS-QA-Database/blob/main/docs/methods.md))
 
 
 The Double Stimulus Continous Quality Scale (DSCQS) was selected as an evaluation method. A total of 88 pairs of stimulus (56 synthesized synthetic videos + 32 synthesized real videos, together with the respective original videos) were assessed. After the test, the resulting scores were processed according to [11] to obtain Differential Mean Opinion Score (DMOS) values for each synthesized video. More details about the subjective assessment procedure can be found in [11].
