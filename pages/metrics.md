@@ -16,8 +16,31 @@ The NVS-QA database contains:
 
 ![DSCQS](https://github.com/pedrogcmartin/NeRF-QA-Database/blob/main/github%20images/DSCQS.jpg)
 
-+ Selected Visual Scenes ([Scenes](https://github.com/pedrogcmartin/NVS-QA-Database/pages/scenes.md))
+The real scenes selected from *Front-Facing IST* were:
++ *Antique* (351 training images with 960x540 pixels each)
++ *Flowers* (377 training images with 960x540 pixels each)
++ *Playground2* (291 training images with 960x540 pixels each)
++ *Statue* (228 training images with 960x540 pixels each)
 
+The synthetics scenes selected from *Front-Facing IST* were:
++ *Classroom* (300 training images with 960x540 pixels each)
++ *Mugs* (300 training images with 960x540 pixels each)
++ *Office* (300 training images with 960x540 pixels each)
++ *Tea* (300 training images with 960x540 pixels each)
+
+The selected videos from *Tanks and Temples* were:
++ *M60* (277 training images with 1077×546 pixels each)
++ *Playground* (275 training images with 1008×548 pixels each)
++ *Train* (258 training images with 982×546 pixels each)
++ *Truck* (226 training images with 980×546 pixels each)
+
+The scenes selected from *Realistic Synthetic 360º* were:
++ *Drums* (100 training images with 800×800 pixels each)
++ *Ficus* (100 training images with 800×800 pixels each)
++ *Lego* (100 training images with 800×800 pixels each)
++ *Ship* (100 training images with 800×800 pixels each) 
+
+For the subjective test purpose, the spatial resolutions of the real and FF scenes were uniformized with a downsampling to 960×540 pixels, followed by a cropping to 928×522 pixels.
 
 The NeRF methods selected for the 360º real scenes were:
 + DVGO [1]
@@ -45,6 +68,7 @@ The NeRF methods selected for the FF synthetic scenes were:
 + NeRF++ [5] 
 + TensoRF [7]
 
+The selected 360º datasets (namely: *Tanks and Temples* and *Realistic Synthetic 360*) have already been used in published works, enabling the validation of the herein generated synthesized videos, by comparison of the obtained objective quality metrics values (using PSNR, SSIM, and LPIPS) with the values reported on those works. Lastly, the 360º synthetic scenes were also synthesized for the case where a subsampling with a factor of 2 was applied to the training set, seeking synthesized video qualities covering the lowest qualities range.
 
 The Double Stimulus Continous Quality Scale (DSCQS) was selected as an evaluation method. A total of 88 pairs of stimulus (56 synthesized synthetic videos + 32 synthesized real videos, together with the respective original videos) were assessed. After the test, the resulting scores were processed according to [11] to obtain Differential Mean Opinion Score (DMOS) values for each synthesized video. More details about the subjective assessment procedure can be found in [11].
 
