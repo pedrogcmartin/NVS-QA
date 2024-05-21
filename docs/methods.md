@@ -4,7 +4,7 @@ From several NVS methods that have been proposed in the past, a subset was selec
 
 | NVS Method                                                           | Description |
 |:--------------------------------------------------------------------:|:------------|
-| [DVGO]](https://sunset1995.github.io/dvgo/)                          | Text        |
+| [DVGO](https://sunset1995.github.io/dvgo/)                          | Text        |
 | [Instant-NGP](https://nvlabs.github.io/instant-ngp/)                 | Text        |
 | [Mip-NeRF 360](https://jonbarron.info/mipnerf360/)                   | Text        |
 | [NeRF++](https://github.com/Kai-46/nerfplusplus)                     | Text        |
