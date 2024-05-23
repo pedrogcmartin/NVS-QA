@@ -1,6 +1,5 @@
-# NVS-QA Database
-
-NeRF View Synthesis: Subjective Quality Assessment and Objective Metrics Evaluation
+# NeRF View Synthesis: Subjective Quality Assessment and Objective Metrics Evaluation
+**NVS-QA Database**
 
 Pedro Martin, António Rodrigues, João Ascenso, Maria Paula Queluz  
 Instituto de Telecomunicações, Instituto Superior Técnico, University of Lisbon
