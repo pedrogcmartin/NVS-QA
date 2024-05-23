@@ -22,4 +22,5 @@ Click for more information about:
 
 # Citation
 
-(**Alterar**) P. Martin, A. Rodrigues, J. Ascenso and M. P. Queluz, "NeRF-QA: Neural Radiance Fields Quality Assessment Database," 2023 15th International Conference on Quality of Multimedia Experience (QoMEX), Ghent, Belgium, 2023, pp. 107-110, doi: 10.1109/QoMEX58391.2023.10178625.
+P. Martin, A. Rodrigues, J. Ascenso and M. P. Queluz, "NeRF View Synthesis: Subjective Quality Assessment and Objective Metrics Evaluation
+," submitted to IEEE Transactions on Multimedia.
