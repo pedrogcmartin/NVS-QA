@@ -1,6 +1,8 @@
 # NeRF View Synthesis: Subjective Quality Assessment and Objective Metrics Evaluation
 ## NVS-QA Database
 
+ArXiv: https://arxiv.org/abs/2405.20078
+
 Authors: Pedro Martin, António Rodrigues, João Ascenso, Maria Paula Queluz 
 
 The NVS-QA database contains: 
