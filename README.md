@@ -1,7 +1,7 @@
 # NeRF View Synthesis: Subjective Quality Assessment and Objective Metrics Evaluation
 ## NVS-QA Database
 
-ArXiv: https://arxiv.org/abs/2405.20078
+Paper: https://ieeexplore.ieee.org/document/10815957
 
 This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible.
 
@@ -26,5 +26,4 @@ Click for more information about:
 
 # Citation
 
-P. Martin, A. Rodrigues, J. Ascenso and M. P. Queluz, "NeRF View Synthesis: Subjective Quality Assessment and Objective Metrics Evaluation
-," submitted to IEEE Transactions on Multimedia.
+P. Martin, A. Rodrigues, J. Ascenso and M. P. Queluz, "NeRF View Synthesis: Subjective Quality Assessment and Objective Metrics Evaluation," in IEEE Access, doi: 10.1109/ACCESS.2024.3522768.
